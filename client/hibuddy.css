@@ -67,7 +67,7 @@ article.landing {
 }
 
 article.room {
-    background-image: url("/static/img/buddy.svg");
+    background-image: url("static/img/buddy.svg");
     background-position: center 0px;
     background-repeat: no-repeat;
     background-size: auto 120%;

@@ -20,7 +20,7 @@ HiBuddyApp.prototype = {
       }]
     };
 
-    this.source = new EventSource("/api/rooms/" + this.room);
+    this.source = new EventSource("api/rooms/" + this.room);
     this.source.on = this.source.addEventListener.bind(this.source);
     this.source.on("uid",          this._onUID.bind(this));
     this.source.on("newbuddy",     this._onNewBuddy.bind(this));
@@ -146,7 +146,7 @@ HiBuddyApp.prototype = {
     var xhr = new XMLHttpRequest();
     message.token = this.token
 
-    xhr.open('POST', '/api/rooms/' + this.room, true);
+    xhr.open('POST', 'api/rooms/' + this.room, true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhr.send(JSON.stringify(message));
   }
